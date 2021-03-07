@@ -1,0 +1,31 @@
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=320, initial-scale=1, maximum=scale=1, user-scalable=no" />
+    <link href="https://fonts.googleapis.com/css?family=Caveat" rel="stylesheet" />
+
+    <script src="script/index.js" defer></script>
+    <link rel="stylesheet" type="text/css" href="index.css" media="screen" />
+
+    <title>Vanilla</title>
+</head>
+<body>
+    <!-- <div id="overlay">
+        <img src="loading.gif" alt="Loading..." />
+    </div> -->
+    <div id="page">
+        <script>
+            var req = new XMLHttpRequest();
+            req.onreadystatechange = () => {
+                // if (req.readyState == 4 && req.status == 200) {
+                // }
+                console.log(req.readyState);
+                console.log(req.status);
+                console.log(req.responseText);
+            }
+            req.open("GET", "http://api.kinopoisk.cf/getGallery?filmID=71", true);
+            req.send(null);
+        </script>
+    </div>
+</body>
+</html>
